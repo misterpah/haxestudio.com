@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Haxe Studio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+		<link href="./js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="./js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./js/loadjscss.js"></script>
+		
+		<style>
+			body
+			{
+			background:#ffffff;
+			}
+			.nav-wrapper .navbar-default
+			{
+			margin:0px;
+			}
+			.jumbotron{
+			padding:80px;
+			background:url(./images/index/mosaic.png) repeat;
+			color:#ffffff;
+			}
+			.navbar{
+			border-radius:0px;
+			-webkit-box-shadow: 0 1px 20px 1px #000000;
+			box-shadow: 0 1px 20px 1px #000000;
+			margin-bottom:0px;
+			}
+			.nav-wrapper{
+			border-bottom:0px;
+			}
+			
+			#supported_platform .col-xs-3 , #supported_platform .col-xs-4
+			{
+			padding-left:0px;
+			padding-right:10px;
+			margin-top:10px;
+			}
+		
+		</style>
+	</head>
+	<body style="">
+		
+		<nav class="navbar navbar-default navbar-inverse" role="navigation">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">Haxe Studio</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+				<ul class="nav navbar-nav" id="menu-content">
+				</ul>		
+				<ul id="menu-right" class="nav navbar-nav navbar-right">
+				</ul>
+			</div>
+			
+
+		</nav>		
+
+
+		<div class="jumbotron">
+		  <div class="container">
+		  
+			<div class="col-md-3">
+				<h1>Haxe Studio</h1>
+				<p>Open Source Integrated Development Environment (IDE) for Haxe.</p><br>
+				<div id="haxestudio_support">
+					<p>Now, Haxe studio supports: </p>
+					<div id="supported_platform"></div>
+				</div>
+			</div>
+			
+			<div class="col-xs-9">
+				<img width=100% src="./images/index/current-hide.png">
+			</div>
+		  </div>
+		</div>	
+
+		<div id="content" class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h2 style="text-align: center;">Multiplatform</h2>
+					<p style="text-align: center;">
+						<img alt="Windows platform" src="./images/index/windows.png" width="64" height="64">
+						<img alt="Linux Platform" src="./images/index/linux.png" width="64" height="64">
+						
+					</p>
+					<p style="text-align: center;">
+						Haxe Studio is developed using Haxe (Javascript target) , Javascript library (mostly jQuery) and the famous application runtime node-webkit. These technologies enable Haxe Studio to executed on Linux (32 &amp; 64 bit) and Windows.
+					</p>
+					<p style="text-align: center;">
+					<img alt="OSX Platform" src="./images/index/apple.png" width="32" height="32"><br/>
+					Although untested, we believe Haxe Studio also can be executed on OSX.<br/>
+					** update (2 March 2014) **<br/>
+					<a href="https://plus.google.com/113245482496557815887/posts/VVJUgDXWu1z" target="_blank">we've test Haxe Studio (master-branch) in OSX!</a>
+					
+					</p>
+					
+				</div>
+				<div class="col-lg-4">
+					<h2 style="text-align: center;">Open Source</h2>
+					<p style="text-align: center;">
+						<img alt="Windows platform" src="./images/index/github.png" width="64" height="64">
+					</p>
+					<p style="text-align: center;">Haxe Studio will always be an Open Source and free to use. Visit our Github&nbsp;page to get the source.</p>
+					<p style="text-align: center;"><a class="btn btn-primary" role="button" href="https://github.com/misterpah/HIDE/tree/hide-future" target="_blank">View code on Github »</a></p>
+				</div>
+				<div class="col-lg-4">
+					<h2 style="text-align: center;">Download</h2>
+					<p style="text-align: center;">
+						<img alt="Windows platform" src="./images/index/download.png" width="64" height="64">
+					</p>					
+					<p style="text-align: center;">Haxe Studio version 0.1</p>
+					<p style="text-align: center;"><a class="btn btn-primary" role="button" href="http://www.haxestudio.com/dist" target="_blank">Download »</a></p>
+				</div>
+			</div>
+		</div>
+
+	<script>
+		loadJS("navigation.js");
+
+		function addPlatform(image,url)
+			{
+			return '<div class="col-xs-3"><a target="_blank" href="'+url+'"><img width=100% src="'+image+'"></a></div>';
+			}
+		
+		$(document).ready(function(){
+			$("#supported_platform").append(addPlatform("./images/index/haxe.svg","http://www.haxe.org"));
+			$("#supported_platform").append(addPlatform("./images/index/openfl.svg","http://www.openfl.org"));
+			$("#supported_platform").append(addPlatform("./images/index/haxeflixel.svg","http://haxeflixel.com/"));
+		});
+	</script>		
+	</body>
+</html>

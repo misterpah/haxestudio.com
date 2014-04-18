@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Haxe Studio : Using Haxe Studio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+		<link href="./js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="./js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./js/loadjscss.js"></script>
+		
+		<style>
+			body
+			{
+			background:#ffffff;
+			}
+			.nav-wrapper .navbar-default
+			{
+			margin:0px;
+			}
+			.jumbotron{
+			padding:80px;
+			background:url(./images/index/space.jpg) repeat;
+			color:#ffffff;
+			}
+			.navbar{
+			border-radius:0px;
+			-webkit-box-shadow: 0 1px 20px 1px #000000;
+			box-shadow: 0 1px 20px 1px #000000;
+			margin-bottom:0px;
+			}
+			.nav-wrapper{
+			border-bottom:0px;
+			}
+			
+			#supported_platform .col-xs-3 , #supported_platform .col-xs-4
+			{
+			padding-left:0px;
+			padding-right:10px;
+			margin-top:10px;
+			}
+		
+		</style>
+	</head>
+	
+	<body style="">
+		
+		<nav class="navbar navbar-default navbar-inverse" role="navigation">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">Haxe Studio</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+				<ul class="nav navbar-nav" id="menu-content">
+				</ul>		
+				<ul id="menu-right" class="nav navbar-nav navbar-right">
+				</ul>		
+			</div>
+	
+		</nav>		
+
+
+
+		<div id="content" class="container">
+		<h1 class="entry-title">Using Haxe Studio</h1>
+		<p><b>this document isn't accurate to the latest version of Haxe Studio. We will update it once the version 0.1 is released. </b> - misterpah</p>
+		<p><em>Please follow the instruction(s) in <a title="Getting Started - Haxe Studio" href="getting-started.html" target="_blank">Getting started</a> page before proceed.</em></p>
+		<p><span id="more-45"></span></p>
+		<h3>Getting Haxe Studio</h3>
+		<p>Download it from <a title="Download Haxe Studio" href="http://www.haxestudio.com/dist" target="_blank">here</a>, and simply extract it into a folder.</p>
+		<ul>
+		<li>For windows, download<strong>&nbsp;HIDE-win.zip</strong></li>
+		<li>For Linux 64 bit, download <strong>HIDE-linux64.tar.gz</strong></li>
+		<li>for other platform, coming soon <img src="http://haxestudio.com/wordpress/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley"> </li>
+		</ul>
+		<h3>Executing Haxe Studio</h3>
+		<p>To run Haxe Studio on windows, just double click the batch file <strong>windows.bat</strong></p>
+		<p><a href="./images/using-haxe-studio/running-hide.jpg"><img class="alignnone size-full wp-image-51" alt="running-hide" src="./images/using-haxe-studio/running-hide.jpg" width="295" height="54"></a></p>
+		<p>&nbsp;</p>
+		<p>To run Haxe Studio in linux, just double click the SH file <strong>linux.run&nbsp;</strong></p>
+		<p><!--more--></p>
+		<h3>Getting Familiar with Haxe Studio</h3>
+		<p><a href="./images/using-haxe-studio/hide-idle.jpg"><img class="alignnone size-full wp-image-52" alt="hide-idle" src="./images/using-haxe-studio/hide-idle.jpg" width="803" height="221"></a></p>
+		<p>This is the standard view of Haxe Studio. Currently, it’s lack of features but it will get better in the future.</p>
+		<p>In the File menu , you can find these options :</p>
+		<p><a href="./images/using-haxe-studio/hide-file.jpg"><img class="alignnone size-full wp-image-55" alt="hide-file" src="./images/using-haxe-studio/hide-file.jpg" width="426" height="354"></a></p>
+		<p>&nbsp;</p>
+		<p>And, in the Help menu, &nbsp;you can find these options.</p>
+		<p><a href="./images/using-haxe-studio/hide-help.jpg"><img class="alignnone size-full wp-image-56" alt="hide-help" src="./images/using-haxe-studio/hide-help.jpg" width="441" height="249"></a></p>
+		<p>&nbsp;</p>
+		<p>Feel free to explore any of these options.</p>
+		<p><!--more--></p>
+		<h3>Using the Haxe Studio</h3>
+		<p>The first thing you can (should) do is open a Haxe/OpenFL Project. Haxe Studio recognize the project file by the extensions (.hxml &amp; .xml) .</p>
+		<p>As for example, We will be using HaxeFlixel project. <a title="HaxeFlixel official page" href="http://haxeflixel.com" target="_blank">HaxeFlixel</a> is an awesome game library ported from the famous flash library, <a title="Flixel official page" href="http://flixel.org/" target="_blank">Flixel</a>. You can read more about how to create HaxeFlixel projects <a title="HaxeFlixel Getting Started" href="http://haxeflixel.com/documentation/getting-started/" target="_blank">here</a>.</p>
+		<h3>Open a project</h3>
+		<p>press CTRL + SHIFT + O to <span style="text-decoration: underline;">O</span>pen Project . Alternatively, you may click from the menu ( <strong>File</strong> -&gt; <strong>Open Project</strong> )</p>
+		<p><a href="./images/using-haxe-studio/hide-file-openProject.jpg"><img class="alignnone size-full wp-image-54" alt="hide-file-openProject" src="./images/using-haxe-studio/hide-file-openProject.jpg" width="222" height="226"></a></p>
+		<p>If the project file is valid Haxe/OpenFL project, Haxe Studio will open the Project Tree (this is a feature added by a plugin named&nbsp;<strong>plugin.misterpah.ProjectTree&nbsp;</strong>)</p>
+		<p><a href="./images/using-haxe-studio/hide-projectTree.jpg"><img class="alignnone size-full wp-image-53" alt="hide-projectTree" src="./images/using-haxe-studio/hide-projectTree.jpg" width="473" height="350"></a></p>
+		<p>&nbsp;</p>
+		<p>You can close the ProjectTree by clicking <strong>HIDE</strong>.</p>
+		<blockquote><p>As For now [January 17,2014] the explorer inside ProjectTree plugin aren’t complete yet.</p></blockquote>
+		<h3>Editing File with Autocomplete features</h3>
+		<p><em>Autcomplete in Haxe are provided by the Haxe Server. To make sure you can use the autcomplete, make sure you’ve opened the related project file.&nbsp;</em></p>
+		<p><em>To use Autocomplete, you must save the file changes first. That is the Official way to obtain autocomplete from Haxe Toolkit.</em></p>
+		<p>First, you need to open a file for editing. Simply&nbsp;press CTRL + O to&nbsp;Open a File . Alternatively, you may click from the menu (&nbsp;<strong>File</strong>&nbsp;-&gt;&nbsp;<strong>Open File</strong>)</p>
+		<p><a href="./images/using-haxe-studio/hide-file-openFile.jpg"><img class="alignnone size-full wp-image-58" alt="hide-file-openFile" src="./images/using-haxe-studio/hide-file-openFile.jpg" width="194" height="229"></a></p>
+		<p><a href="./images/using-haxe-studio/hide-file-opened.jpg"><img class="alignnone size-full wp-image-59" alt="hide-file-opened" src="./images/using-haxe-studio/hide-file-opened.jpg" width="465" height="551"></a></p>
+		<p>&nbsp;</p>
+		<p>Currently, Autocomplete are invoked automatically when you press <strong>dot</strong> ( <strong>.</strong> )</p>
+		<p>&nbsp;</p>
+		<p><a href="./images/using-haxe-studio/hide-autocomplete.jpg"><img class="alignnone size-full wp-image-65" alt="hide-autocomplete" src="./images/using-haxe-studio/hide-autocomplete.jpg" width="367" height="309"></a></p>
+		<p>As you typed , autocomplete will change accordingly.</p>
+		<p><a href="./images/using-haxe-studio/hide-autocomplete-2.jpg"><img class="alignnone size-full wp-image-66" alt="hide-autocomplete-2" src="./images/using-haxe-studio/hide-autocomplete-2.jpg" width="284" height="121"></a></p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p><span style="font-size: 1.17em; line-height: 1.5em;">Compiling your Project</span></p>
+		<p><em>As this project is a HaxeFlixel Project, which depends on OpenFL and Lime, we expect these things are already installed.</em></p>
+		<p>Compiling projects are available from the Project Tree. We’ll be compiling this project to a Flash Target.</p>
+		<p><a href="./images/using-haxe-studio/compile.jpg"><img class="alignnone size-full wp-image-69" alt="compile" src="./images/using-haxe-studio/compile.jpg" width="515" height="296"></a></p>
+		<p>&nbsp;</p>
+		<p>If there were no error, it will show the result.</p>
+		<p><a href="./images/using-haxe-studio/compile-2.jpg"><img class="alignnone size-full wp-image-70" alt="compile-2" src="./images/using-haxe-studio/compile-2.jpg" width="706" height="570"></a></p>
+				
+			
+		</div>
+
+	<script>
+		loadJS("navigation.js");
+
+		function addPlatform(image,url)
+			{
+			return '<div class="col-xs-3"><a target="_blank" href="'+url+'"><img width=100% src="'+image+'"></a></div>';
+			}
+		
+		$(document).ready(function(){
+			$("#supported_platform").append(addPlatform("./images/index/haxe.svg","http://www.haxe.org"));
+			$("#supported_platform").append(addPlatform("./images/index/openfl.svg","http://www.openfl.org"));
+			$("#supported_platform").append(addPlatform("./images/index/haxeflixel.svg","http://haxeflixel.com/"));
+		});
+	</script>		
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Haxe Studio : Getting Started</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+		<link href="./js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="./js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./js/loadjscss.js"></script>
+		
+		<style>
+			body
+			{
+			background:#ffffff;
+			}
+			.nav-wrapper .navbar-default
+			{
+			margin:0px;
+			}
+			.jumbotron{
+			padding:80px;
+			background:url(./images/index/space.jpg) repeat;
+			color:#ffffff;
+			}
+			.navbar{
+			border-radius:0px;
+			-webkit-box-shadow: 0 1px 20px 1px #000000;
+			box-shadow: 0 1px 20px 1px #000000;
+			margin-bottom:0px;
+			}
+			.nav-wrapper{
+			border-bottom:0px;
+			}
+			
+			#supported_platform .col-xs-3 , #supported_platform .col-xs-4
+			{
+			padding-left:0px;
+			padding-right:10px;
+			margin-top:10px;
+			}
+		
+		</style>
+	</head>
+	
+	<body style="">
+		
+		<nav class="navbar navbar-default navbar-inverse" role="navigation">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">Haxe Studio</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+				<ul class="nav navbar-nav" id="menu-content">
+				</ul>		
+				<ul id="menu-right" class="nav navbar-nav navbar-right">
+				</ul>
+			</div>
+
+		</nav>		
+
+
+
+		<div id="content" class="container">
+			<h1 class="entry-title">Getting Started</h1>
+
+			<div class="entry-content">
+			<p><span style="font-size: 14px; line-height: 1.5em;">Haxe Studio is an Integrated Development Environment specially made for Haxe. To use the IDE, you need to setup several things first.</span></p>
+			<h3>1. Install Haxe Toolkit</h3>
+			<p><em>you may skip this part if you’ve installed <strong>Haxe version 3</strong> before.</em></p>
+			<p><a title="Haxe Toolkit Official Website" href="http://www.haxe.org" target="_blank">Haxe toolkit</a> is the heart and soul of Haxe Studio, and it is the first thing we need to install. Follow these simple steps</p>
+			<ol>
+			<li>Visit&nbsp;<a href="http://haxe.org/download">http://haxe.org/download</a>&nbsp;and download <strong>Automatic Installer</strong> according to your Operating System</li>
+			<li>Run the installer</li>
+			</ol>
+			<p>You can check if your Haxe installation is correct. Simply open your <strong>cmd</strong>/<strong>terminal</strong>/<strong>bash &nbsp;</strong>and type the command below.</p>
+			<blockquote><p>haxe</p></blockquote>
+			<p>You should get “Haxe Compiler 3.X.X” .If you get that (instead of errors), your installation is correct.</p>
+			<h3>2. Install Lime</h3>
+			<p><em>you may skip this part if you’ve installed&nbsp;<strong>Lime</strong>&nbsp;before.</em></p>
+			<p><em><strong>Lime</strong> is dependent to <strong>Haxe Toolkit</strong>. Make sure you’ve installed <em><strong>Haxe Toolkit&nbsp;</strong></em>before proceed.</em></p>
+			<p>Lime (Light Media Engine) is an <strong>Haxe Library</strong> which enhance the Haxe features. You can read more about Lime <a title="Lime Github page" href="https://github.com/openfl/lime" target="_blank">here</a>.</p>
+			<p>To install Lime, open your&nbsp;<strong>cmd</strong>/<strong>terminal</strong>/<strong>bash , </strong>and type the command below.</p>
+			<blockquote><p>haxelib install lime</p></blockquote>
+			<p>The download will take a while, and the installation are done automatically.</p>
+			<p><span id="more-32"></span></p>
+			<h3>3. Install OpenFL</h3>
+			<p>OpenFL is the library which standardize the native function in multiple target platform. Installing OpenFL is optional, but it’s great to have it. You may read more about OpenFL <a title="OpenFL Official Website" href="http://www.openfl.org/developer/documentation/" target="_blank">here</a>.</p>
+			<p>To install Lime, open your&nbsp;<strong>cmd</strong>/<strong>terminal</strong>/<strong>bash ,&nbsp;</strong>and type the command below.</p>
+			<blockquote><p>haxelib install openfl</p></blockquote>
+			<p>The download will take a while, and the installation are done automatically.</p>
+			</div><!-- .entry-content -->
+			</article>
+		</div>
+
+	<script>
+		loadJS("navigation.js");
+
+		function addPlatform(image,url)
+			{
+			return '<div class="col-xs-3"><a target="_blank" href="'+url+'"><img width=100% src="'+image+'"></a></div>';
+			}
+		
+		$(document).ready(function(){
+			$("#supported_platform").append(addPlatform("./images/index/haxe.svg","http://www.haxe.org"));
+			$("#supported_platform").append(addPlatform("./images/index/openfl.svg","http://www.openfl.org"));
+			$("#supported_platform").append(addPlatform("./images/index/haxeflixel.svg","http://haxeflixel.com/"));
+		});
+	</script>		
+	</body>
+</html>
