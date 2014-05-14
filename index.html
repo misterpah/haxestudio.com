@@ -7,6 +7,8 @@
 		<link href="./js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<script src="./js/bootstrap/js/bootstrap.min.js"></script>
 		<script src="./js/loadjscss.js"></script>
+		<script src="./js/FeedEk.js"></script>
+		
 		
 		<style>
 			body
@@ -38,7 +40,30 @@
 			padding-right:10px;
 			margin-top:10px;
 			}
-		
+			
+			.itemContent pre
+			{
+			width:100% !important;
+			}
+			
+			#divRss ul
+			{
+		   list-style: none outside none;
+    		margin: 0;			
+    		padding:0px;
+			}
+			
+			#divRss li
+			{
+			margin-bottom:10px;
+			}
+			
+			#divRss .itemContent
+			{
+			display:none;
+			}
+			
+			
 		</style>
 	</head>
 	<body style="">
@@ -67,56 +92,54 @@
 		<div class="jumbotron">
 		  <div class="container">
 		  
-			<div class="col-md-3">
-				<h1>Haxe Studio</h1>
-				<p>Open Source Integrated Development Environment (IDE) for Haxe.</p><br>
+			
+			<div class="col-md-12 text-center">
+				<img width=128px src="./images/haxe-studio.png" />
+				<h1 style="font-size:40px;text-align:center">Haxe Studio</h1>
+				<p>Open Source Integrated Development Environment (IDE) for Haxe.</p>
 				<div id="haxestudio_support">
-					<p>Now, Haxe studio supports: </p>
-					<div id="supported_platform"></div>
+					<div id="supported_platform" class="col-md-12"></div>
 				</div>
 			</div>
 			
-			<div class="col-xs-9">
-				<img width=100% src="./images/index/current-hide.png">
-			</div>
 		  </div>
 		</div>	
 
 		<div id="content" class="container">
 			<div class="row">
-				<div class="col-lg-4">
+				<div class="col-lg-3">
 					<h2 style="text-align: center;">Multiplatform</h2>
 					<p style="text-align: center;">
-						<img alt="Windows platform" src="./images/index/windows.png" width="64" height="64">
 						<img alt="Linux Platform" src="./images/index/linux.png" width="64" height="64">
-						
+						<img alt="Windows platform" src="./images/index/windows.png" width="64" height="64">
+						<img alt="OSX Platform" src="./images/index/apple.png" width="64" height="64">
 					</p>
 					<p style="text-align: center;">
-						Haxe Studio is developed using Haxe (Javascript target) , Javascript library (mostly jQuery) and the famous application runtime node-webkit. These technologies enable Haxe Studio to executed on Linux (32 &amp; 64 bit) and Windows.
-					</p>
-					<p style="text-align: center;">
-					<img alt="OSX Platform" src="./images/index/apple.png" width="32" height="32"><br/>
-					Although untested, we believe Haxe Studio also can be executed on OSX.<br/>
-					** update (2 March 2014) **<br/>
-					<a href="https://plus.google.com/113245482496557815887/posts/VVJUgDXWu1z" target="_blank">we've test Haxe Studio (master-branch) in OSX!</a>
-					
+						Haxe Studio is developed using Haxe (Javascript target) , Javascript library (mostly jQuery) and the famous application runtime node-webkit. These technologies enable Haxe Studio to executed on Linux (32 &amp; 64 bit) , Windows and OSX.
 					</p>
 					
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-3">
 					<h2 style="text-align: center;">Open Source</h2>
 					<p style="text-align: center;">
 						<img alt="Windows platform" src="./images/index/github.png" width="64" height="64">
 					</p>
 					<p style="text-align: center;">Haxe Studio will always be an Open Source and free to use. Visit our Github&nbsp;page to get the source.</p>
-					<p style="text-align: center;"><a class="btn btn-primary" role="button" href="https://github.com/misterpah/HIDE/tree/hide-future" target="_blank">View code on Github »</a></p>
+					<p style="text-align: center;"><a class="btn btn-primary" role="button" href="https://github.com/misterpah/Haxe-Studio" target="_blank">View code on Github »</a></p>
+					<br/>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-3">				
+					<h2 style="text-align: center;"><img alt="Windows platform" src="./images/index/github.png" width="32" height="32"> Project Feed</h2>
+					<div style="width:100%;padding:10px;" id="divRss"></div>
+				</div>
+				
+				<div class="col-lg-3">
 					<h2 style="text-align: center;">Download</h2>
 					<p style="text-align: center;">
 						<img alt="Windows platform" src="./images/index/download.png" width="64" height="64">
 					</p>					
-					<p style="text-align: center;">Haxe Studio version 0.1</p>
+					<p style="text-align: center;">Stable : v0.1</p>
+					<p style="text-align: center;">Development : v0.2 beta</p>
 					<p style="text-align: center;"><a class="btn btn-primary" role="button" href="http://www.haxestudio.com/dist" target="_blank">Download »</a></p>
 				</div>
 			</div>
@@ -127,13 +150,18 @@
 
 		function addPlatform(image,url)
 			{
-			return '<div class="col-xs-3"><a target="_blank" href="'+url+'"><img width=100% src="'+image+'"></a></div>';
+			return '<a target="_blank" href="'+url+'"><img width=64px src="'+image+'"></a>&nbsp;&nbsp;';
 			}
 		
 		$(document).ready(function(){
-			$("#supported_platform").append(addPlatform("./images/index/haxe.svg","http://www.haxe.org"));
+			//$("#supported_platform").append(addPlatform("./images/index/haxe.svg","http://www.haxe.org"));
 			$("#supported_platform").append(addPlatform("./images/index/openfl.svg","http://www.openfl.org"));
 			$("#supported_platform").append(addPlatform("./images/index/haxeflixel.svg","http://haxeflixel.com/"));
+			
+		$('#divRss').FeedEk({
+			FeedUrl : 'https://github.com/misterpah/Haxe-Studio/commits/master.atom',
+		  });		
+			
 		});
 	</script>		
 	</body>
